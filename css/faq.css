@@ -1,0 +1,167 @@
+/* ==========================================================================
+   FAQ.CSS
+   Page-specific styling for faq.html only.
+   Layout: sticky category sidebar + accordion list, live search bar in
+   the hero, and a "no results" empty state for search/filter misses.
+   ========================================================================== */
+ 
+/* --------------------------------------------------------------------------
+   LAYOUT — sidebar categories + accordion list
+   -------------------------------------------------------------------------- */
+.faq-body { padding-top: var(--space-xl); }
+
+.faq-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+/* --------------------------------------------------------------------------
+   CATEGORY SIDEBAR
+   -------------------------------------------------------------------------- */
+.faq-categories {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border: 1px solid var(--color-border-soft);
+  padding: 0.6rem;
+}
+
+.faq-cat-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.75rem 0.9rem;
+  text-align: left;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  border-left: 3px solid transparent;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.faq-cat-btn:hover { background-color: var(--color-bg-alt); }
+
+.faq-cat-btn.is-active {
+  background-color: var(--color-bg-alt);
+  border-left-color: var(--color-gold);
+  color: var(--color-maroon);
+}
+
+.faq-cat-count {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  background-color: var(--color-bg-alt);
+  padding: 0.1rem 0.5rem;
+  min-width: 22px;
+  text-align: center;
+}
+
+.faq-cat-btn.is-active .faq-cat-count {
+  background-color: var(--color-bg-card);
+}
+
+@media (max-width: 900px) {
+  .faq-layout { grid-template-columns: 1fr; }
+
+  .faq-categories {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .faq-cat-btn {
+    flex: 1 1 auto;
+    justify-content: center;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+  }
+
+  .faq-cat-btn.is-active { border-bottom-color: var(--color-gold); }
+}
+
+/* --------------------------------------------------------------------------
+   ACCORDION
+   -------------------------------------------------------------------------- */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faq-item {
+  border: 1px solid var(--color-border-soft);
+  background-color: var(--color-bg-card);
+  transition: opacity 200ms ease;
+}
+
+/* Hidden by search/category filtering in faq.js */
+.faq-item.is-filtered-out { display: none; }
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  text-align: left;
+  font-size: var(--fs-md);
+  font-weight: 500;
+  color: var(--color-maroon-dark);
+}
+
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--color-gold-dark);
+  transition: transform var(--transition-base);
+}
+
+.faq-item.is-open .faq-icon { transform: rotate(45deg); }
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-base) ease, padding var(--transition-base) ease;
+}
+
+.faq-item.is-open .faq-answer {
+  max-height: 400px;
+}
+
+.faq-answer p {
+  padding: 0 1.25rem 1.1rem;
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+  max-width: 68ch;
+}
+
+.faq-answer a { color: var(--color-emerald); text-decoration: underline; }
+
+/* Highlighted search match text */
+.faq-highlight {
+  background-color: var(--color-gold-light);
+  color: var(--color-maroon-dark);
+  padding: 0 2px;
+}
+
+/* --------------------------------------------------------------------------
+   EMPTY STATE
+   -------------------------------------------------------------------------- */
+.faq-empty {
+  text-align: center;
+  max-width: 480px;
+  margin: var(--space-lg) auto 0;
+  padding: var(--space-lg);
+  border: 1px dashed var(--color-border);
+}
+
+.faq-empty p { color: var(--color-text-muted); margin-bottom: var(--space-sm); }

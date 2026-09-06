@@ -1,0 +1,211 @@
+/* ==========================================================================
+   BEAWAR.CSS
+   Page-specific styling for beawar-history.html only.
+   Sections: overview, timeline, four gates, places to visit, culture/CTA.
+   Includes the .reveal scroll-animation pattern used across this page.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   SCROLL REVEAL — elements start hidden, animate in once visible.
+   Controlled by beawar.js adding .is-visible via IntersectionObserver.
+   -------------------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+.section-head { margin-bottom: var(--space-lg); }
+.section-lead { color: var(--color-text-muted); max-width: 60ch; margin-inline: auto; }
+
+/* --------------------------------------------------------------------------
+   OVERVIEW
+   -------------------------------------------------------------------------- */
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.overview-grid p { color: var(--color-text-muted); margin-bottom: var(--space-sm); max-width: 62ch; }
+
+.overview-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--color-border-soft);
+}
+
+.fact-item {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: 0.9rem var(--space-sm);
+  border-bottom: 1px solid var(--color-border-soft);
+}
+
+.fact-item:last-child { border-bottom: none; }
+
+.fact-label { font-size: var(--fs-xs); color: var(--color-text-muted); }
+.fact-value { font-size: var(--fs-sm); font-weight: 500; color: var(--color-maroon-dark); text-align: right; }
+
+@media (max-width: 900px) {
+  .overview-grid { grid-template-columns: 1fr; }
+}
+
+/* --------------------------------------------------------------------------
+   TIMELINE
+   -------------------------------------------------------------------------- */
+.timeline {
+  max-width: 780px;
+  margin-inline: auto;
+  border-left: 2px solid var(--color-border);
+  padding-left: var(--space-lg);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: var(--space-lg);
+}
+
+.timeline-item:last-child { padding-bottom: 0; }
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--space-lg) - 6px);
+  top: 0.35rem;
+  width: 11px;
+  height: 11px;
+  background-color: var(--color-gold);
+  border: 2px solid var(--color-bg-alt);
+}
+
+.timeline-year {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--color-maroon);
+  margin-bottom: 0.3rem;
+}
+
+.timeline-body h4 { margin-bottom: 0.3rem; }
+.timeline-body p { color: var(--color-text-muted); font-size: var(--fs-sm); max-width: 60ch; }
+
+@media (max-width: 600px) {
+  .timeline { padding-left: var(--space-md); }
+  .timeline-item::before { left: calc(-1 * var(--space-md) - 6px); }
+}
+
+/* --------------------------------------------------------------------------
+   FOUR GATES
+   -------------------------------------------------------------------------- */
+.gates-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.gate-card {
+  border: 1px solid var(--color-border-soft);
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.gate-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+
+.gate-card img { width: 100%; height: 190px; object-fit: cover; }
+
+.gate-card-body { padding: var(--space-sm); }
+.gate-card-body h4 { margin-bottom: 0.35rem; }
+.gate-card-body p { font-size: var(--fs-xs); color: var(--color-text-muted); }
+
+@media (max-width: 900px) {
+  .gates-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+  .gates-grid { grid-template-columns: 1fr; }
+}
+
+/* --------------------------------------------------------------------------
+   PLACES TO VISIT
+   -------------------------------------------------------------------------- */
+.places-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.place-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border-soft);
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.place-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+
+.place-card img { width: 100%; height: 170px; object-fit: cover; }
+
+.place-card-body { padding: var(--space-sm); }
+
+.place-tag {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  color: var(--color-emerald);
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.place-card-body h4 { margin-bottom: 0.35rem; }
+.place-card-body p { font-size: var(--fs-xs); color: var(--color-text-muted); line-height: var(--lh-relaxed); }
+
+@media (max-width: 1100px) {
+  .places-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 800px) {
+  .places-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+  .places-grid { grid-template-columns: 1fr; }
+}
+
+/* --------------------------------------------------------------------------
+   CULTURE / BEST TIME TO VISIT
+   -------------------------------------------------------------------------- */
+.culture-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.culture-content p { color: var(--color-text-muted); margin-bottom: var(--space-sm); max-width: 62ch; }
+.culture-content strong { color: var(--color-maroon-dark); }
+
+.culture-image img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border: 1px solid var(--color-border-soft);
+}
+
+@media (max-width: 960px) {
+  .culture-grid { grid-template-columns: 1fr; }
+  .culture-image { order: -1; }
+  .culture-image img { height: 320px; }
+}

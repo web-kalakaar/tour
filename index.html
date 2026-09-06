@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K. Dixon Tour | Beawar Tourism - Day-wise Itinerary in Rajasthan</title>
+  <meta name="description"
+    content="K. Dixon Tour is Beawar's trusted heritage travel agency, offering guided tours across the Walled City, Aravali hills, and Rajasthan's cultural landmarks.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/webp" href="images/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+
+  <!-- ============ LOADER ============ -->
+  <div class="loader" id="loader">
+    <div class="loader-frame">
+       
+      <p class="loader-name">K. DIXON TOUR</p>
+      <p class="loader-tag">Beawar Tourism</p>
+      <div class="loader-line"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ============ SCROLL PROGRESS BAR ============ -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <span class="navbar-logo-main">K. Dixon Tour</span>
+        <span class="navbar-logo-sub">Beawar Tourism</span>
+      </a>
+
+      <nav class="navbar-nav" id="navbarNav">
+        <ul class="navbar-list">
+          <li><a href="index.html" class="navbar-link is-active">Home</a></li>
+          <li><a href="about.html" class="navbar-link">About Us</a></li>
+
+          <li class="navbar-dropdown">
+            <button class="navbar-link navbar-dropdown-toggle" aria-expanded="false">
+              Beawar
+              <svg class="navbar-caret" viewBox="0 0 12 8" aria-hidden="true">
+                <path d="M1 1L6 6L11 1" fill="none" stroke="currentColor" stroke-width="1.6" />
+              </svg>
+            </button>
+            <div class="navbar-dropdown-menu">
+              <a href="beawar-history.html">History &amp; Origin</a>
+              <a href="beawar-history.html#landmarks">Landmarks</a>
+              <a href="gallery.html">Photo Gallery</a>
+            </div>
+          </li>
+
+          <li class="navbar-dropdown">
+            <button class="navbar-link navbar-dropdown-toggle" aria-expanded="false">
+              Tour
+              <svg class="navbar-caret" viewBox="0 0 12 8" aria-hidden="true">
+                <path d="M1 1L6 6L11 1" fill="none" stroke="currentColor" stroke-width="1.6" />
+              </svg>
+            </button>
+            <div class="navbar-dropdown-menu">
+              <a href="packages.html">All Packages</a>
+              <a href="packages.html#itinerary">Day-wise Itinerary</a>
+              <a href="packages.html#custom">Custom Itinerary</a>
+            </div>
+          </li>
+
+          <li><a href="gallery.html" class="navbar-link">Gallery</a></li>
+          <li><a href="faq.html" class="navbar-link">FAQs</a></li>
+          <li><a href="contact.html" class="navbar-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar-actions">
+        <a href="tel:+919413604850" class="navbar-phone">
+          <svg viewBox="0 0 24 24" class="icon">
+            <path
+              d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1.1.5 1.1 1.1V20c0 .6-.5 1-1.1 1C10.8 21 3 13.2 3 3.9 3 3.4 3.5 3 4 3h3.1c.6 0 1.1.5 1.1 1.1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8z"
+              fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          </svg>
+          <span>+91 941 3604 850</span>
+        </a>
+        <a href="https://wa.me/919413604850" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">
+          <svg viewBox="0 0 24 24" class="icon">
+            <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z" fill="none" stroke="currentColor"
+              stroke-width="1.4" />
+          </svg>
+          WhatsApp
+        </a>
+        <button class="navbar-toggle" id="navbarToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero-slides" id="heroSlides">
+        <div class="hero-slide is-active" style="background-image: url('images/h1.jpg');"></div>
+
+        <div class="hero-slide" style="background-image: url('images/h2.jpg');"></div>
+
+        <div class="hero-slide" style="background-image: url('images/h3.jpg');"></div>
+
+        <div class="hero-slide" style="background-image: url('images/h4.jpg');"></div>
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-logo-float" aria-hidden="true">
+        <img src="images/logo.png" loading="lazy" alt="">
+      </div>
+
+      <div class="container hero-content">
+        <p class="eyebrow">Since 1836 &mdash; the town Colonel Dixon built</p>
+        <h1 class="hero-title">Discover Beawar,<br>the Walled City of Rajasthan</h1>
+        <p class="hero-tagline">K. Dixon Tour has guided travellers through Beawar's forts, gates, and desert hills for
+          years &mdash; combining local expertise with personalised, comfortable journeys.</p>
+        <div class="hero-cta">
+          <a href="beawar-history.html" class="btn btn-primary btn-lg">About Beawar</a>
+          <a href="https://wa.me/919413604850" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg">Enquire on
+            WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="hero-dots" id="heroDots"></div>
+    </section>
+
+    <!-- ============ ABOUT US ============ -->
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="images/logo.png" loading="lazy" alt="K. Dixon Tour guide with travellers in Beawar">
+        </div>
+
+        <div class="about-content">
+          <p class="eyebrow">Who we are</p>
+          <h2>A local agency, built on Beawar's own history</h2>
+          <div class="divider"></div>
+          <p>K. Dixon Tour is a Beawar-based travel agency built around one idea: nobody explains this town's forts,
+            gates, and desert roads better than the people who grew up walking them. We plan Day-wise Itinerary, day trips,
+            and custom Rajasthan circuits for families, groups, and solo travellers alike.</p>
+
+          <div class="about-stats">
+            <div class="about-stat">
+              <span class="about-stat-num" data-count="15">0</span><span class="about-stat-plus">+</span>
+              <span class="about-stat-label">Years in Business</span>
+            </div>
+            <div class="about-stat">
+              <span class="about-stat-num" data-count="8000">0</span><span class="about-stat-plus">+</span>
+              <span class="about-stat-label">Travellers Served</span>
+            </div>
+            <div class="about-stat">
+              <span class="about-stat-num-static">RTDC</span>
+              <span class="about-stat-label">Registered Agency</span>
+            </div>
+            <div class="about-stat">
+              <span class="about-stat-num-static">4.8</span>
+              <span class="about-stat-label">Average Rating</span>
+            </div>
+          </div>
+
+          <a href="about.html" class="btn btn-secondary">Read Our Full Story</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT BEAWAR ============ -->
+    <section class="section section-alt beawar" id="beawar">
+      <div class="container beawar-grid">
+        <div class="beawar-content">
+          <p class="eyebrow">The destination</p>
+          <h2>Beawar &mdash; Rajasthan's Walled City</h2>
+          <div class="divider"></div>
+          <p>Founded in 1836 by Colonel George Dixon on the edge of the Aravali hills, Beawar grew from a trading
+            outpost into one of Rajasthan's most distinctive walled cities. Its old town, the Parkota, is still entered
+            through four historic gates &mdash; Ajmeri, Mewari, Chang, and Surajpole &mdash; each opening onto narrow
+            lanes, markets, and havelis that carry the town's trading-era character.</p>
+          <p>Beyond the walls, the surrounding Aravali landscape and proximity to Ajmer and Pushkar make Beawar a
+            natural base for exploring central Rajasthan's temples, forts, and desert scenery.</p>
+          <div class="beawar-cta">
+            <a href="beawar-history.html" class="btn btn-primary">Explore Beawar's History</a>
+            <a href="gallery.html" class="btn btn-secondary">View Gallery</a>
+          </div>
+        </div>
+
+        <div class="beawar-gallery">
+          <img src="images/1a.jpg" loading="lazy" alt="Historic gate of Beawar's Walled City"
+            class="beawar-gallery-img beawar-gallery-img-tall">
+          <img src="images/1b.jpg" loading="lazy" alt="Market lane inside Beawar's old town" class="beawar-gallery-img">
+          <img src="images/1d.avif" loading="lazy" alt="Aravali hills near Beawar" class="beawar-gallery-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="text-center testimonials-head">
+          <h6 class="eyebrow">Traveller experiences</h6>
+          <h2>What our travellers say</h2>
+          <div class="divider" style="margin-inline:auto;"></div>
+        </div>
+      </div>
+
+      <div class="container testimonials-grid" id="testimonialsGrid">
+        <article class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testimonial-text">Our guide knew every gate and lane of the old city by heart. The Beawar heritage
+            walk was the highlight of our whole Rajasthan trip.</p>
+          <div class="testimonial-author">
+            <img src="images/logo.png" loading="lazy" alt="">
+            <div><span class="testimonial-name">Ritu Sharma</span><span class="testimonial-loc">Mumbai</span></div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testimonial-text">Booked a custom 3-day circuit through K. Dixon Tour. Transport, stays, and food
+            were all arranged smoothly. Genuinely felt taken care of.</p>
+          <div class="testimonial-author">
+            <img src="images/logo.png" loading="lazy" alt="">
+            <div><span class="testimonial-name">Arjun Mehta</span><span class="testimonial-loc">Delhi</span></div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testimonial-text">As a solo woman traveller, safety mattered most. The team was responsive,
+            transparent about pricing, and the trip ran exactly as planned.</p>
+          <div class="testimonial-author">
+            <img src="images/logo.png" loading="lazy" alt="">
+            <div><span class="testimonial-name">Priya Nair</span><span class="testimonial-loc">Bengaluru</span></div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testimonial-text">The history walkthrough of the four gates was fascinating &mdash; our guide
+            connected every stop back to how the town was actually built.</p>
+          <div class="testimonial-author">
+            <img src="images/logo.png" loading="lazy" alt="">
+            <div><span class="testimonial-name">Vinod Rao</span><span class="testimonial-loc">Hyderabad</span></div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testimonial-text">Family trip with grandparents and kids &mdash; the pace and stops were adjusted
+            for both, without us even having to ask twice.</p>
+          <div class="testimonial-author">
+            <img src="images/logo.png" loading="lazy" alt="">
+            <div><span class="testimonial-name">Sneha Joshi</span><span class="testimonial-loc">Pune</span></div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testimonial-text">Great value for the itinerary offered. Clean stays, good food stops, and drivers
+            who knew the desert roads well.</p>
+          <div class="testimonial-author">
+            <img src="images/logo.png" loading="lazy" alt="">
+            <div><span class="testimonial-name">Karan Bhatt</span><span class="testimonial-loc">Ahmedabad</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA / CONTACT BANNER ============ -->
+    <section class="cta-banner" id="ctaBanner">
+      <div class="container cta-banner-grid">
+        <div class="cta-banner-content">
+          <p class="eyebrow" style="color:var(--color-gold-light);">Plan your visit</p>
+          <h2 class="cta-banner-title">Ready to explore Beawar with us</h2>
+          <p class="cta-banner-text">Reach out for a custom itinerary, group booking, or a quick question &mdash; our
+            team responds within a few hours.</p>
+
+          <ul class="cta-banner-info">
+            <li>
+              <svg viewBox="0 0 24 24" class="icon">
+                <path
+                  d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1.1.5 1.1 1.1V20c0 .6-.5 1-1.1 1C10.8 21 3 13.2 3 3.9 3 3.4 3.5 3 4 3h3.1c.6 0 1.1.5 1.1 1.1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8z"
+                  fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+              </svg>
+              <a href="tel:+919413604850">+91 941 3604 850</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" class="icon">
+                <path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.6" />
+                <path d="M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.6" />
+              </svg>
+              <a href="mailto:info@kdixontour.com">info@kdixontour.com</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" class="icon">
+                <path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" fill="none" stroke="currentColor"
+                  stroke-width="1.6" />
+                <circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6" />
+              </svg>
+              <span>Ajmeri Gate Road, Beawar, Rajasthan 305901</span>
+            </li>
+          </ul>
+
+          <div class="cta-banner-actions">
+            <a href="contact.html" class="btn btn-gold">Send an Enquiry</a>
+            <a href="https://wa.me/919413604850" target="_blank" rel="noopener" class="btn btn-secondary"
+              style="border-color:var(--color-gold);color:var(--color-gold-light);">Chat on WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="cta-banner-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3003.093257593706!2d77.5210852!3d27.2106657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3973a302ddbfff99%3A0x610cc04315cffed1!2sLaxmi%20Vilas%20Palace!5e1!3m2!1sen!2sin!4v1788623754137!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-brand">
+        <span class="footer-logo">K. Dixon Tour</span>
+        <p>Beawar's local heritage travel agency &mdash; guiding travellers through the Walled City and Rajasthan's
+          desert landscape since our founding.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" class="icon">
+              <path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v7h3v-7h3l1-3h-4v-1c0-.6.4-1 1-1z" fill="currentColor" />
+            </svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" class="icon">
+              <rect x="3" y="3" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="17.2" cy="6.8" r="1" fill="currentColor" />
+            </svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" class="icon">
+              <rect x="2" y="5" width="20" height="14" fill="none" stroke="currentColor" stroke-width="1.6" />
+              <path d="M10 9l6 3-6 3z" fill="currentColor" />
+            </svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="about.html">About Us</a>
+        <a href="beawar-history.html">Beawar History</a>
+        <a href="packages.html">Tour Packages</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="faq.html">FAQs</a>
+        <a href="contact.html">Contact Us</a>
+ 
+      </div>
+
+      <div class="footer-col">
+        <h4>Reach Us</h4>
+        <p>Ajmeri Gate Road, Beawar,<br>Rajasthan 305901, India</p>
+        <p><a href="tel:+919413604850">+91 941 3604 850</a></p>
+        <p><a href="mailto:info@kdixontour.com">info@kdixontour.com</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>&copy; <span id="footerYear"></span> K. Dixon Tour, Beawar. All rights reserved.</span>
+        <span>Registered Tourism Agency, Rajasthan</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ FLOATING WHATSAPP BUTTON ============ -->
+  <a href="https://wa.me/919413604850" target="_blank" rel="noopener" class="whatsapp-float"
+    aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" class="icon">
+      <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z" fill="none" stroke="currentColor"
+        stroke-width="1.4" />
+    </svg>
+  </a>
+
+  <!-- ============ BACK TO TOP BUTTON ============ -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" class="icon">
+      <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+
+</html>

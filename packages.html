@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour Packages &amp; Pricing | K. Dixon Tour - Beawar</title>
+  <meta name="description"
+    content="Compare K. Dixon Tour packages for Beawar and the surrounding circuit - day-wise itinerary, facilities, and transparent pricing across three tiers.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/webp" href="images/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/packages.css">
+</head>
+
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader-frame">
+       
+      <p class="loader-name">K. DIXON TOUR</p>
+      <p class="loader-tag">Beawar Tourism</p>
+      <div class="loader-line"><span></span></div>
+    </div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <span class="navbar-logo-main">K. Dixon Tour</span>
+        <span class="navbar-logo-sub">Beawar Tourism</span>
+      </a>
+
+      <nav class="navbar-nav" id="navbarNav">
+        <ul class="navbar-list">
+          <li><a href="index.html" class="navbar-link">Home</a></li>
+          <li><a href="about.html" class="navbar-link">About Us</a></li>
+
+          <li class="navbar-dropdown">
+            <button class="navbar-link navbar-dropdown-toggle" aria-expanded="false">
+              Beawar
+              <svg class="navbar-caret" viewBox="0 0 12 8" aria-hidden="true">
+                <path d="M1 1L6 6L11 1" fill="none" stroke="currentColor" stroke-width="1.6" />
+              </svg>
+            </button>
+            <div class="navbar-dropdown-menu">
+              <a href="beawar-history.html">History &amp; Origin</a>
+              <a href="beawar-history.html#places">Places to Visit</a>
+              <a href="gallery.html">Photo Gallery</a>
+            </div>
+          </li>
+
+          <li class="navbar-dropdown">
+            <button class="navbar-link navbar-dropdown-toggle" aria-expanded="true">
+              Tour
+              <svg class="navbar-caret" viewBox="0 0 12 8" aria-hidden="true">
+                <path d="M1 1L6 6L11 1" fill="none" stroke="currentColor" stroke-width="1.6" />
+              </svg>
+            </button>
+            <div class="navbar-dropdown-menu">
+              <a href="packages.html#pricing" class="is-active">All Packages</a>
+              <a href="#itinerary">Day-wise Itinerary</a>
+              <a href="#custom">Custom Itinerary</a>
+            </div>
+          </li>
+
+          <li><a href="gallery.html" class="navbar-link">Gallery</a></li>
+          <li><a href="faq.html" class="navbar-link">FAQs</a></li>
+          <li><a href="contact.html" class="navbar-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar-actions">
+        <a href="tel:+919413604850" class="navbar-phone">
+          <svg viewBox="0 0 24 24" class="icon">
+            <path
+              d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1.1.5 1.1 1.1V20c0 .6-.5 1-1.1 1C10.8 21 3 13.2 3 3.9 3 3.4 3.5 3 4 3h3.1c.6 0 1.1.5 1.1 1.1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8z"
+              fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          </svg>
+          <span>+91 941 3604 850</span>
+        </a>
+        <a href="https://wa.me/919413604850" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">
+          <svg viewBox="0 0 24 24" class="icon">
+            <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z" fill="none" stroke="currentColor"
+              stroke-width="1.4" />
+          </svg>
+          WhatsApp
+        </a>
+        <button class="navbar-toggle" id="navbarToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero" style="background-image:url('images/bg1.jpg')">
+      <div class="page-hero-overlay"></div>
+      <div class="container page-hero-content">
+        <p class="eyebrow">Tours &amp; pricing</p>
+        <h1>Our Tour Packages</h1>
+        <p class="page-hero-sub">A day-wise breakdown of what you'll see, where you'll stay, and exactly what each
+          pricing tier includes.</p>
+      </div>
+    </section>
+
+    <!-- ============ PACKAGE SUMMARY ============ -->
+    <section class="section reveal">
+      <div class="container package-summary">
+        <p class="eyebrow">Featured package</p>
+        <h2>3-Day Beawar Heritage &amp; Circuit Tour</h2>
+        <div class="divider"></div>
+        <p>Our most-booked package &mdash; a three-day route through Beawar's Walled City, the Aravali hill roads, and
+          the Ajmer-Pushkar circuit. Below is exactly what happens each day, followed by full pricing across three
+          comfort levels.</p>
+
+        <div class="summary-stats">
+          <div class="summary-stat"><span class="summary-stat-label">Duration</span><span class="summary-stat-value">3
+              Days / 2 Nights</span></div>
+          <div class="summary-stat"><span class="summary-stat-label">Group Size</span><span class="summary-stat-value">2
+              to 12 people</span></div>
+          <div class="summary-stat"><span class="summary-stat-label">Starting From</span><span
+              class="summary-stat-value">₹6,499 / person</span></div>
+          <div class="summary-stat"><span class="summary-stat-label">Best Season</span><span
+              class="summary-stat-value">October to March</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCROLL-ANIMATED ITINERARY ROAD ============ -->
+    <section class="section section-alt journey" id="itinerary">
+      <div class="container">
+        <div class="text-center section-head reveal">
+          <p class="eyebrow">Day by day</p>
+          <h2>The route we take you on</h2>
+          <div class="divider" style="margin-inline:auto;"></div>
+        </div>
+      </div>
+
+      <div class="journey-track" id="journeyTrack">
+        <div class="journey-road">
+          <div class="journey-road-fill" id="journeyRoadFill"></div>
+        </div>
+
+        <div class="journey-stop journey-stop-left reveal">
+          <div class="journey-marker">1</div>
+          <div class="journey-card">
+            <img src="images/3a.jpg" loading="lazy" alt="Day 1 - Beawar Walled City tour">
+            <div class="journey-card-body">
+              <span class="journey-day">Day 1 &mdash; Morning to Evening</span>
+              <h4>Arrival &amp; Beawar Walled City Walk</h4>
+              <p>Pickup and check-in, followed by a guided walk through the Parkota &mdash; entering via Ajmeri Gate,
+                through Agarsen Market, to Mahadev Ji Ki Chhatri and Chang Gate. Evening free at leisure or a visit to
+                Subhash Udyan.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-stop journey-stop-right reveal">
+          <div class="journey-marker">2</div>
+          <div class="journey-card">
+            <img src="images/3b.jpg" loading="lazy" alt="Day 1 evening - Shoolbred Memorial Church">
+            <div class="journey-card-body">
+              <span class="journey-day">Day 1 &mdash; Evening</span>
+              <h4>Colonial Beawar &amp; Local Sweets</h4>
+              <p>Visit the Shoolbred Memorial Church, then a stop at Halwai Gali to try til patti, Beawar's signature
+                sesame-jaggery sweet, before dinner and overnight stay.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-stop journey-stop-left reveal">
+          <div class="journey-marker">3</div>
+          <div class="journey-card">
+            <img src="images/3c.jpg" loading="lazy" alt="Day 2 - Ajmer excursion">
+            <div class="journey-card-body">
+              <span class="journey-day">Day 2 &mdash; Full Day</span>
+              <h4>Ajmer &amp; Pushkar Excursion</h4>
+              <p>Early departure to Ajmer and Pushkar, roughly 70 km away. A full day covering the region's temples and
+                lakeside sights, with lunch included, before returning to Beawar for the night.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-stop journey-stop-right reveal">
+          <div class="journey-marker">4</div>
+          <div class="journey-card">
+            <img src="images/3a.jpg" loading="lazy" alt="Day 3 - Dev Dham Devmali and Aravali hills">
+            <div class="journey-card-body">
+              <span class="journey-day">Day 3 &mdash; Morning</span>
+              <h4>Dev Dham Devmali &amp; Aravali Drive</h4>
+              <p>A scenic drive into the Aravali hills toward Masuda, visiting the sacred site of Dev Dham Devmali,
+                before a final breakfast stop back in Beawar.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-stop journey-stop-left reveal">
+          <div class="journey-marker">5</div>
+          <div class="journey-card">
+            <img src="images/3b.jpg" loading="lazy" alt="Day 3 - final market visit and departure">
+            <div class="journey-card-body">
+              <span class="journey-day">Day 3 &mdash; Afternoon</span>
+              <h4>Handicraft Shopping &amp; Departure</h4>
+              <p>A final stop at the Walled City's handicraft stores for Rajasthani puppets and decorative pieces,
+                followed by drop-off at your hotel, bus stand, or railway station.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <div class="text-center section-head reveal">
+          <p class="eyebrow">Pricing</p>
+          <h2>Choose your comfort level</h2>
+          <div class="divider" style="margin-inline:auto;"></div>
+          <p class="section-lead">Prices are per person, based on double occupancy, for the 3-day / 2-night package
+            above. Larger groups and custom durations are quoted separately.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="pricing-card reveal">
+            <h3>Explorer</h3>
+            <p class="pricing-note">Budget-friendly, comfortable essentials</p>
+            <div class="pricing-amount">₹6,499<span>/ person</span></div>
+            <ul class="pricing-features">
+              <li>Non-AC shared vehicle transport</li>
+              <li>2-star hotel, twin sharing</li>
+              <li>Breakfast &amp; dinner included</li>
+              <li>Shared group guide</li>
+              <li>Group size: 6 to 12 people</li>
+            </ul>
+            <a href="contact.html?package=explorer" class="btn btn-secondary">Choose Explorer</a>
+          </article>
+
+          <article class="pricing-card pricing-card-featured reveal">
+            <span class="pricing-badge">Most Booked</span>
+            <h3>Comfort</h3>
+            <p class="pricing-note">Our most popular balance of price and quality</p>
+            <div class="pricing-amount">₹9,999<span>/ person</span></div>
+            <ul class="pricing-features">
+              <li>AC vehicle, shared with your group only</li>
+              <li>3-star hotel, twin sharing</li>
+              <li>All meals included (breakfast, lunch, dinner)</li>
+              <li>Dedicated guide for your group</li>
+              <li>Group size: 2 to 8 people</li>
+            </ul>
+            <a href="contact.html?package=comfort" class="btn btn-primary">Choose Comfort</a>
+          </article>
+
+          <article class="pricing-card reveal">
+            <h3>Heritage Premium</h3>
+            <p class="pricing-note">Private transport and upgraded stays</p>
+            <div class="pricing-amount">₹14,999<span>/ person</span></div>
+            <ul class="pricing-features">
+              <li>Private AC vehicle, exclusive to your group</li>
+              <li>4-star heritage-style hotel</li>
+              <li>All meals, including one traditional Rajasthani thali dinner</li>
+              <li>Private guide with flexible pacing</li>
+              <li>Group size: 2 to 6 people</li>
+            </ul>
+            <a href="contact.html?package=premium" class="btn btn-secondary">Choose Premium</a>
+          </article>
+        </div>
+
+        <p class="pricing-footnote">Prices exclude personal expenses, monument entry fees where applicable, and are
+          subject to change during peak festival dates (Tejaji Fair, Dussehra). A confirmation advance is required at
+          booking &mdash; see our <a href="cancellation-policy.html">cancellation policy</a> for details.</p>
+      </div>
+    </section>
+
+    <!-- ============ CUSTOM ITINERARY ============ -->
+    <section class="custom-cta" id="custom">
+      <div class="container custom-cta-inner">
+        <h2>Want a different route or duration</h2>
+        <p>Tell us your dates, group size, and interests &mdash; we'll build a custom Beawar itinerary around them, at
+          the same transparent per-tier pricing.</p>
+        <div class="custom-cta-actions">
+          <a href="index.html#ctaBanner" class="btn btn-gold btn-lg">
+            Request Custom Itinerary
+          </a>
+          <a href="https://wa.me/919413604850" target="_blank" rel="noopener" class="btn btn-secondary btn-lg"
+            style="border-color:var(--color-gold);color:var(--color-gold-light);">Ask on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-brand">
+        <span class="footer-logo">K. Dixon Tour</span>
+        <p>Beawar's local heritage travel agency &mdash; guiding travellers through the Walled City and Rajasthan's
+          desert landscape since our founding.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" class="icon">
+              <path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v7h3v-7h3l1-3h-4v-1c0-.6.4-1 1-1z" fill="currentColor" />
+            </svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" class="icon">
+              <rect x="3" y="3" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="17.2" cy="6.8" r="1" fill="currentColor" />
+            </svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" class="icon">
+              <rect x="2" y="5" width="20" height="14" fill="none" stroke="currentColor" stroke-width="1.6" />
+              <path d="M10 9l6 3-6 3z" fill="currentColor" />
+            </svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="about.html">About Us</a>
+        <a href="beawar-history.html">Beawar History</a>
+        <a href="packages.html">Tour Packages</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="faq.html">FAQs</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="cancellation-policy.html">Cancellation Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Reach Us</h4>
+        <p>Ajmeri Gate Road, Beawar,<br>Rajasthan 305901, India</p>
+        <p><a href="tel:+919413604850">+91 941 3604 850</a></p>
+        <p><a href="mailto:info@kdixontour.com">info@kdixontour.com</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>&copy; <span id="footerYear"></span> K. Dixon Tour, Beawar. All rights reserved.</span>
+        <span>Registered Tourism Agency, Rajasthan</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919413604850" target="_blank" rel="noopener" class="whatsapp-float"
+    aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" class="icon">
+      <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z" fill="none" stroke="currentColor"
+        stroke-width="1.4" />
+    </svg>
+  </a>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" class="icon">
+      <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script src="js/packages.js"></script>
+</body>
+
+</html>

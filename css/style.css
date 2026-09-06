@@ -1,0 +1,417 @@
+/* ==========================================================================
+   K. DIXON TOUR — BASE STYLESHEET
+   Royal Rajasthani theme — common variables, resets, typography, buttons,
+   utilities, animations. NO components (navbar/footer/cards) live here —
+   those go in their own page-specific or component CSS files.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. FONTS
+   Add these links in <head> of every page, in this order:
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+   -------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+   2. CSS VARIABLES — ROYAL RAJASTHANI THEME
+   -------------------------------------------------------------------------- */
+:root {
+  /* --- Brand colors --- */
+  --color-maroon: #7A1F2B;
+  --color-maroon-dark: #5C171F;
+  --color-maroon-light: #9C3341;
+
+  --color-gold: #C9A227;
+  --color-gold-light: #E0C25E;
+  --color-gold-dark: #A6841C;
+
+  --color-emerald: #0F5C4C;
+  --color-emerald-dark: #0B4438;
+
+  /* --- Backgrounds --- */
+  --color-bg: #FBF6EC;
+  --color-bg-alt: #EFE3CB;
+  --color-bg-card: #FFFFFF;
+
+  /* --- Text --- */
+  --color-text: #2E1F1A;
+  --color-text-muted: #6B5B4F;
+  --color-text-on-dark: #FBF6EC;
+
+  /* --- Borders / dividers --- */
+  --color-border: #D9C48A;
+  --color-border-soft: #E7DAB8;
+
+  /* --- Feedback (kept universal, not themed) --- */
+  --color-success: #2E7D32;
+  --color-error: #B3261E;
+
+/* --- Typography --- */
+
+--font-display: 'Yeseva One', 'Georgia', serif;
+--font-body: 'Poppins', 'Segoe UI', sans-serif;
+
+  --fs-xs: 0.8rem;
+  --fs-sm: 0.9rem;
+  --fs-base: 1rem;
+  --fs-md: 1.15rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 2rem;
+  --fs-2xl: 2.75rem;
+  --fs-3xl: 3.5rem;
+
+  --lh-tight: 1.2;
+  --lh-normal: 1.6;
+  --lh-relaxed: 1.8;
+
+  /* --- Spacing scale --- */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  /* --- Radius --- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* --- Shadow (used sparingly — royal theme favors borders over shadow) --- */
+  --shadow-sm: 0 2px 8px rgba(46, 31, 26, 0.08);
+  --shadow-md: 0 6px 20px rgba(46, 31, 26, 0.12);
+
+  /* --- Motion --- */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 450ms ease;
+
+  /* --- Layout --- */
+  --content-max-width: 1180px;
+  --content-padding: 5vw;
+}
+
+/* --------------------------------------------------------------------------
+   3. RESET
+   -------------------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth;overflow-x: hidden;overscroll-behavior-y: none; }
+ 
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  
+}
+
+img, picture, video, canvas, svg { display: block; max-width: 100%; height: auto; }
+
+a { color: inherit; text-decoration: none; }
+
+ul, ol { list-style: none; }
+
+button, input, textarea, select { font: inherit; color: inherit; }
+
+button { cursor: pointer; background: none; border: none; }
+
+table { border-collapse: collapse; width: 100%; }
+
+/* --------------------------------------------------------------------------
+   4. ACCESSIBILITY — visible keyboard focus everywhere
+   -------------------------------------------------------------------------- */
+:focus-visible {
+  outline: 2px solid var(--color-emerald);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. TYPOGRAPHY
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: var(--lh-tight);
+  color: var(--color-maroon-dark);
+}
+
+h1 { font-size: var(--fs-3xl); font-weight: 700; }
+h2 { font-size: var(--fs-2xl); }
+h3 { font-size: var(--fs-xl); }
+h4 { font-size: var(--fs-lg); font-weight: 600; }
+
+p { max-width: 65ch; }
+
+.text-muted { color: var(--color-text-muted); }
+.text-gold { color: var(--color-gold-dark); }
+.text-emerald { color: var(--color-emerald); }
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--color-emerald);
+  letter-spacing: 0.03em;
+  text-align: center;
+  display: inline-block;
+ 
+}
+
+/* Decorative divider — use under section headings, not everywhere */
+.divider {
+  width: 64px;
+  height: 3px;
+  background-color: var(--color-gold);
+  border-radius: var(--radius-pill);
+  margin-block: var(--space-sm);
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: var(--fs-2xl); }
+  h2 { font-size: var(--fs-xl); }
+  h3 { font-size: var(--fs-md); }
+}
+
+/* --------------------------------------------------------------------------
+   6. LAYOUT UTILITIES
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  padding-inline: var(--content-padding);
+}
+
+.section {
+  padding-block: var(--space-2xl);
+}
+
+.section-alt {
+  background-color: var(--color-bg-alt);
+}
+
+.flex { display: flex; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+.flex-wrap { flex-wrap: wrap; }
+.grid { display: grid; gap: var(--space-md); }
+
+.text-center { text-align: center; }
+
+/* --------------------------------------------------------------------------
+   7. BUTTONS
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid transparent;
+  transition: background-color var(--transition-base), color var(--transition-base),
+              border-color var(--transition-base), transform var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn:active { transform: scale(0.97); }
+
+.btn-primary {
+  background-color: var(--color-maroon);
+  color: var(--color-text-on-dark);
+  border-color: var(--color-maroon);
+}
+.btn-primary:hover {
+  background-color: var(--color-maroon-dark);
+  border-color: var(--color-gold);
+  color: var(--color-gold-light);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-maroon);
+  border-color: var(--color-maroon);
+}
+.btn-secondary:hover {
+  background-color: var(--color-maroon);
+  color: var(--color-text-on-dark);
+}
+
+.btn-gold {
+  background-color: var(--color-gold);
+  color: var(--color-maroon-dark);
+  border-color: var(--color-gold);
+}
+.btn-gold:hover {
+  background-color: var(--color-gold-dark);
+}
+
+.btn-whatsapp {
+  background-color: var(--color-emerald);
+  color: var(--color-text-on-dark);
+  border-color: var(--color-emerald);
+}
+.btn-whatsapp:hover { background-color: var(--color-emerald-dark); }
+
+.btn-sm { padding: 0.55rem 1.2rem; font-size: var(--fs-xs); }
+.btn-lg { padding: 1.1rem 2.25rem; font-size: var(--fs-md); }
+
+/* --------------------------------------------------------------------------
+   8. FORM ELEMENTS (base only — page-specific form layout lives elsewhere)
+   -------------------------------------------------------------------------- */
+.input, .textarea, .select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-bg-card);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-base);
+  color: var(--color-text);
+  transition: border-color var(--transition-fast);
+}
+
+.input:focus, .textarea:focus, .select:focus {
+  border-color: var(--color-emerald);
+  outline: none;
+}
+
+.input::placeholder, .textarea::placeholder { color: var(--color-text-muted); }
+
+.form-label {
+  display: block;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: var(--color-text);
+}
+
+.form-error {
+  color: var(--color-error);
+  font-size: var(--fs-xs);
+  margin-top: 0.3rem;
+}
+
+/* --------------------------------------------------------------------------
+   9. ICONS
+   -------------------------------------------------------------------------- */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--color-bg-alt);
+  color: var(--color-emerald);
+  font-size: var(--fs-lg);
+  border: 1px solid var(--color-border-soft);
+}
+ 
+/* --------------------------------------------------------------------------
+   10. BADGES / TAGS (e.g. trust strip, package highlights)
+   -------------------------------------------------------------------------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.9rem;
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-bg-alt);
+  color: var(--color-maroon-dark);
+  border: 1px solid var(--color-border);
+}
+
+/* --------------------------------------------------------------------------
+   11. CARDS (base surface only — layout/content per component file)
+   -------------------------------------------------------------------------- */
+.surface {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.surface:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+/* --------------------------------------------------------------------------
+   12. ANIMATIONS (use sparingly — one deliberate moment, not on every element)
+   -------------------------------------------------------------------------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmerGold {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.animate-fade-in { animation: fadeIn var(--transition-slow) ease forwards; }
+.animate-rise-in { animation: riseIn 600ms ease forwards; }
+
+/* --------------------------------------------------------------------------
+   13. SCROLLBAR (subtle theme touch — optional, degrades gracefully)
+   -------------------------------------------------------------------------- */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--color-bg-alt); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: var(--radius-pill);
+}
+
+/* --------------------------------------------------------------------------
+   14. SELECTION COLOR
+   -------------------------------------------------------------------------- */
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-maroon-dark);
+}

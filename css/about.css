@@ -1,0 +1,627 @@
+/* ==========================================================================
+   ABOUT.CSS
+   Page-specific styling for about.html only.
+   Sections: page hero, story, founder, team, milestones, certifications, cta.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PAGE HERO (shared pattern — reused on other inner pages too)
+   -------------------------------------------------------------------------- */
+.page-hero {
+  position: relative;
+  min-height: 46vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: var(--color-text-on-dark);
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(46, 31, 26, 0.6) 0%,
+    rgba(46, 31, 26, 0.78) 100%
+  );
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero .eyebrow {
+  color: var(--color-gold-light);
+}
+
+.page-hero h1 {
+  color: var(--color-text-on-dark);
+  font-size: var(--fs-3xl);
+  margin-block: 0.5rem;
+}
+
+.page-hero-sub {
+  color: rgba(251, 246, 236, 0.9);
+  max-width: 55ch;
+  font-size: var(--fs-md);
+}
+
+@media (max-width: 700px) {
+  .page-hero {
+    min-height: 38vh;
+  }
+  .page-hero h1 {
+    font-size: var(--fs-2xl);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   OUR STORY
+   -------------------------------------------------------------------------- */
+.story-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.story-content p {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+  max-width: 62ch;
+}
+
+.story-mission {
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.story-mission h3 {
+  margin-bottom: 0.5rem;
+}
+
+.story-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.story-list li {
+  position: relative;
+  padding-left: 1.4rem;
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+}
+
+.story-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 2px;
+  background-color: var(--color-gold);
+}
+
+.story-image {
+  position: sticky;
+  top: 100px;
+  width: 100%;
+  height: fit-content;
+}
+
+.story-image img {
+  display: block;
+  width: 100%;
+  height: clamp(420px, 65vh, 620px);
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--color-border-soft);
+  border-radius: 8px;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .story-image {
+    position: relative;
+    top: auto;
+  }
+
+  .story-image img {
+    height: 500px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .story-image img {
+    height: 380px;
+    border-radius: 6px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .story-image img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 960px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+  .story-image {
+    order: -1;
+  }
+  .story-image img {
+    height: 340px;
+    position: static;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   FOUNDER
+   -------------------------------------------------------------------------- */
+
+.founder-grid {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.25fr);
+    gap: clamp(2rem, 5vw, var(--space-xl));
+    align-items: center;
+}
+
+
+/* --------------------------------------------------------------------------
+   FOUNDER IMAGE
+   -------------------------------------------------------------------------- */
+
+.founder-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    border: 1px solid var(--color-border-soft);
+    border-radius: 10px;
+
+    background: var(--color-bg-soft, #f8f8f8);
+
+    isolation: isolate;
+}
+
+.founder-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    /*
+       Portrait ratio keeps the founder photo looking
+       like a proper profile/portrait instead of a banner.
+    */
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+    object-position: center top;
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+
+/* --------------------------------------------------------------------------
+   IMAGE HOVER
+   -------------------------------------------------------------------------- */
+
+.founder-image:hover img {
+    transform: scale(1.025);
+}
+
+
+/* --------------------------------------------------------------------------
+   FOUNDER CONTENT
+   -------------------------------------------------------------------------- */
+
+.founder-content {
+    min-width: 0;
+}
+
+.founder-role {
+    display: inline-block;
+
+    margin-bottom: var(--space-sm);
+
+    color: var(--color-emerald);
+
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    line-height: 1.4;
+
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.founder-content p {
+    max-width: 62ch;
+
+    margin: 0 0 var(--space-sm);
+
+    color: var(--color-text-muted);
+
+    line-height: 1.75;
+}
+
+.founder-content p:last-of-type {
+    margin-bottom: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   FOUNDER QUOTE
+   -------------------------------------------------------------------------- */
+
+.founder-quote {
+    max-width: 58ch;
+
+    margin: var(--space-md) 0 0;
+    padding: 0.85rem 0 0.85rem var(--space-md);
+
+    border-left: 3px solid var(--color-gold);
+
+    color: var(--color-maroon-dark);
+
+    font-family: var(--font-display);
+    font-size: var(--fs-lg);
+    font-style: italic;
+    line-height: 1.6;
+}
+
+
+/* --------------------------------------------------------------------------
+   LARGE TABLET
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+
+    .founder-grid {
+        grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.2fr);
+
+        gap: clamp(
+            1.75rem,
+            4vw,
+            var(--space-xl)
+        );
+    }
+
+    .founder-image {
+        max-width: 440px;
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   TABLET
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .founder-grid {
+        grid-template-columns: 1fr;
+
+        gap: var(--space-lg);
+
+        align-items: start;
+    }
+
+    /*
+       Important:
+       The image stays portrait even after
+       the layout becomes a single column.
+    */
+    .founder-image {
+        width: min(100%, 420px);
+        max-width: 420px;
+
+        margin-inline: auto;
+    }
+
+    .founder-image img {
+        aspect-ratio: 4 / 5;
+
+        object-position: center top;
+    }
+
+    .founder-content {
+        width: 100%;
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   BELOW 800px
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 800px) {
+
+    .founder-grid {
+        gap: var(--space-md);
+    }
+
+    .founder-image {
+        width: min(100%, 380px);
+        max-width: 380px;
+    }
+
+    .founder-image img {
+        aspect-ratio: 4 / 5;
+    }
+
+    .founder-content p {
+        line-height: 1.7;
+    }
+
+    .founder-quote {
+        margin-top: var(--space-md);
+
+        padding-left: 0.9rem;
+
+        font-size: var(--fs-lg);
+        line-height: 1.55;
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   MOBILE
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .founder-grid {
+        gap: var(--space-md);
+    }
+
+    .founder-image {
+        width: min(100%, 340px);
+        max-width: 340px;
+
+        border-radius: 8px;
+    }
+
+    .founder-image img {
+        aspect-ratio: 4 / 5;
+
+        object-position: center top;
+    }
+
+    .founder-role {
+        margin-bottom: 0.6rem;
+
+        font-size: var(--fs-sm);
+    }
+
+    .founder-content p {
+        margin-bottom: 0.75rem;
+
+        line-height: 1.65;
+    }
+
+    .founder-quote {
+        margin-top: var(--space-md);
+
+        padding: 0.7rem 0 0.7rem 0.85rem;
+
+        border-left-width: 2px;
+
+        font-size: var(--fs-md, 1rem);
+        line-height: 1.55;
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   SMALL MOBILE
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+    .founder-image {
+        width: min(100%, 310px);
+        max-width: 310px;
+    }
+
+    .founder-image img {
+        aspect-ratio: 4 / 5;
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   VERY SMALL MOBILE
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 360px) {
+
+    .founder-image {
+        width: min(100%, 280px);
+        max-width: 280px;
+    }
+
+    .founder-image img {
+        aspect-ratio: 4 / 5;
+    }
+
+    .founder-quote {
+        padding-left: 0.75rem;
+
+        font-size: 0.95rem;
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   REDUCED MOTION
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .founder-image img {
+        transition: none;
+    }
+
+    .founder-image:hover img {
+        transform: none;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   TEAM
+   -------------------------------------------------------------------------- */
+.team-head {
+  margin-bottom: var(--space-lg);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.team-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border-soft);
+  overflow: hidden;
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.team-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.team-card-body {
+  padding: var(--space-sm);
+}
+
+.team-card-body h4 {
+  margin-bottom: 0.15rem;
+}
+
+.team-role {
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--color-emerald);
+  margin-bottom: 0.5rem;
+}
+
+.team-desc {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  line-height: var(--lh-relaxed);
+}
+
+@media (max-width: 960px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   MILESTONES
+   -------------------------------------------------------------------------- */
+.milestones-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  text-align: center;
+}
+
+.milestone {
+  padding: var(--space-md);
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border-soft);
+  border-top: 3px solid var(--color-maroon);
+}
+
+.milestone-num,
+.milestone-plus {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  color: var(--color-maroon);
+}
+
+.milestone-label {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 900px) {
+  .milestones-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   CERTIFICATIONS
+   -------------------------------------------------------------------------- */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.cert-card {
+  padding: var(--space-md);
+  text-align: center;
+  border: 1px solid var(--color-border-soft);
+}
+
+.cert-card .icon-circle {
+  margin-inline: auto;
+  margin-bottom: var(--space-sm);
+}
+
+.cert-card h4 {
+  margin-bottom: 0.4rem;
+}
+
+.cert-card p {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  margin-inline: auto;
+}
+
+@media (max-width: 900px) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}
